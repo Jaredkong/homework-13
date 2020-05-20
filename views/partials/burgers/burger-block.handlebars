@@ -1,0 +1,14 @@
+{{#unless devoured}}
+<li class="available d-flex align-items-center justify-content-between">
+    <h5>{{ burger_name }}</h5>
+    <button type="button" class="devour btn btn-success" data-id="{{ id }}">
+        Eat
+    </button>
+</li>
+{{/unless}}
+
+{{#if devoured}}
+<li class="devoured d-flex align-items-center justify-content-between">
+    <h5>{{ burger_name }}</h5>
+</li>
+{{/if}}

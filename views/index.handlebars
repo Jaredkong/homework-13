@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <h1 class="display-4">
+            <a href="" style="text-decoration: none;"></a> Eat a Burger! </h1>
+    </div>
+    <div class="row">
+        <div class="col-md-6 d-flex flex-column align-items-center">
+            <h2>Available Burgers</h2>
+            <ul>
+                {{#each burgerList}}
+                {{#unless devoured}}
+                {{> burgers/burger-block }}
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+
+        <div class="col-md-6 d-flex flex-column align-items-center">
+            <h2>Devoured Burgers</h2>
+            <ul>
+                {{#each burgerList}}
+                {{#if devoured}}
+                {{> burgers/burger-block}}
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 d-flex align-items-center flex-column">
+            <h2 class="display-4">Add a Burger</h2>
+            <form class="create-form">
+                <div class="form-group">
+                    <label for="ca">Burger Name:</label>
+                    <input type="text" id="burger-input" name="name">
+                </div>
+                <button type="submit" class="btn btn-primary">Add Burger</button>
+            </form>
+        </div>
+    </div>
+</div>
