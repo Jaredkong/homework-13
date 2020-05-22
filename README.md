@@ -11,4 +11,4 @@ node server.js
 ```
 
 
-![Alt text](./assets/screenshot1.PNG?raw=true "screenshot")
+![Alt text](./public/assets/screenshot1.PNG?raw=true "screenshot")
